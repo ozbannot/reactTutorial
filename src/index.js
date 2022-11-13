@@ -1,72 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+// // var var1 = "var変数宣言";
+// // console.log(var1);
 
-class Square extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: null,
-    };
-  }
-  render() {
-    return (
-      <button className="square" onClick={() => this.setState({value: 'X'})}>
-        {this.state.value}
-        {this.props.value}
-      </button>
-    );
-  }
+
+// // // var変数は上書き可能
+// // var1 = "var上書き"
+// // console.log(var1);
+
+// // // var変数は再宣言
+// // var var1 = "var再宣言"
+// // console.log(var1);
+
+// // let var2 = "let変数"
+// // console.log(var2);
+
+// // var2 = "let上書き"
+// // console.log(var2);
+
+// // let var2 = '再宣言';
+
+// const var3 = "var3変数宣言";
+// console.log(var3);
+
+// var3 = "上書き";
+
+const func2 = (str) => {
+  return str;
 }
-
-class Board extends React.Component {
-  renderSquare(i) {
-    return <Square value={i} />;
-  }
-
-  render() {
-    const status = 'Next player: X';
-
-    return (
-      <div>
-        <div className="status">{status}</div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
-      </div>
-    );
-  }
-}
-
-class Game extends React.Component {
-  render() {
-    return (
-      <div className="game">
-        <div className="game-board">
-          <Board />
-        </div>
-        <div className="game-info">
-          <div>{/* status */}</div>
-          <ol>{/* TODO */}</ol>
-        </div>
-      </div>
-    );
-  }
-}
-
-// ========================================
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Game />);
+console.log(func2("func2"));
